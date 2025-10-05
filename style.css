@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #141526 0%, #0a0b15 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  width: 340px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#gameArea {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 130px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #00d4ff, #0077ff);
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00d4ff;
+  transition: left 0.05s linear;
+}
+
+.enemy {
+  position: absolute;
+  top: -30px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #ff0055, #ff6600);
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ff0033;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  from { top: -40px; }
+  to { top: 420px; }
+}
+
+#startBtn {
+  background: linear-gradient(90deg, #39a2ff, #5df1c1);
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 15px;
+}
+
+#startBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(93, 241, 193, 0.5);
+}
